@@ -1,0 +1,15 @@
+.post .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post .info {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.info strong {
+  margin-right: 20px;
+}
+.post__content p{
+  margin-top: 5px;
+}

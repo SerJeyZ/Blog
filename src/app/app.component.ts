@@ -1,10 +1,23 @@
 import { Component } from '@angular/core';
 
+export interface Post {
+  title:string
+  text:string
+  id?:number
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test1';
+  posts: Post[] = [
+    { title: 'Учу Angular', text:'Начал изучать Angular', id:1},
+    { title: 'Изучаю Angular', text: 'Продолжаю изучать Angular9.0', id: 2 }
+  ]
+
+  updatePosts(post:Post) {
+    this.posts.unshift(post)
+  }
 }

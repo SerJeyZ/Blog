@@ -1,0 +1,24 @@
+<app-alert></app-alert>
+
+<nav class="navbar bg-primary">
+  <h1>
+    <a routerLink="/">Панель администратора</a>
+  </h1>
+  <div class="admin-nav">
+    <ul *ngIf="auth.isAuth()">
+      <li routerLinkActive="active">
+        <a [routerLink]="['/admin', 'dashboard']">Список постов</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/admin', 'create']">Создать</a>
+      </li>
+      <li>
+        <a href="#" (click)="logout($event)">Выйти</a>
+      </li>
+    </ul>
+    <a class="index-link" routerLink="/">На главную</a>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

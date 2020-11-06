@@ -1,0 +1,10 @@
+.index-link {
+  display: inline-block;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+}
